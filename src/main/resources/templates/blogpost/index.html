@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Blog Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/standard.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to Our Blog Post Site!</h1>
+		<h3>Check out our blogs!</h3>
+		
+		<div class="row">
+			<div th:each="blogPost : ${blogPosts}">
+		        <div class="col-md-6">
+		            <div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <p th:text="${blogPost.title}"/>
+						</div>
+					    <div class="panel-body">
+							<p th:text="${blogPost.author}"/>
+							<p th:text="${blogPost.blogEntry}" />
+					    </div>
+					    <div class="panel-footer">
+						<a class="btn btn-primary" th:href="@{/blog_posts/edit/{id}(id=${blogPost.id})}">Edit Post</a>
+						<form action="#" th:action="@{'/blog_posts/delete/{id}'(id=${blogPost.id})}" th:method="delete" class="form-horizontal">
+						   <button type="submit" class="btn btn-danger">Delete</button>
+						</form>
+		            </div>
+		          </div>
+		        </div>
+		    </div>
+		</div>
+		<a class= "btn btn-primary" th:href="@{/blog_posts/new}">Submit a New Blog Post</a>
+	</div>
+<script src="/webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
