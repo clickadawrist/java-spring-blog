@@ -11,7 +11,7 @@
 	<groupId>com.techtalentsouth</groupId>
 	<artifactId>TechTalentBlog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>TechTalentBlog</name>
 	<description>A littleA blog application</description>
 
