@@ -65,6 +65,12 @@
 		</dependency>
 	</dependencies>
 
+	<configuration>
+		<processTypes>
+			<web>java $JAVA_OPTS -cp target/classes:target/dependency/* TechTalentBlogApplication</web>
+		</processTypes>
+	</configuration>
+
 	<build>
 		<plugins>
 			<plugin>
