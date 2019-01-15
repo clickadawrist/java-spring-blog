@@ -11,7 +11,7 @@
 	<groupId>com.techtalentsouth</groupId>
 	<artifactId>TechTalentBlog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>TechTalentBlog</name>
 	<description>A littleA blog application</description>
 
@@ -71,6 +71,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+        		<groupId>com.heroku.sdk</groupId>
+        		<artifactId>heroku-maven-plugin</artifactId>
+        		<version>2.0.6</version>
+      		</plugin>
 		</plugins>
 	</build>
 
