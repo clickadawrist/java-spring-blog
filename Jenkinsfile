@@ -13,7 +13,7 @@ pipeline {
           }
           stage("deploy") {
                steps {
-                    echo "this is where we would deploy to heroku or some other server"
+                    sh "./mvn clean heroku:deploy"
                }
           }
      }
