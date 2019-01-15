@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    pollSCM(cron(* * * * *))
     stages {
         stage("build") {
             steps {
