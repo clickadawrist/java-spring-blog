@@ -1,17 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage("build") {
+        stage("Build") {
             steps {
                 sh "./mvnw clean install -DskipTests"
             }
         }
-        stage("test") {
+        stage("Test") {
             steps {
                 sh "./mvnw test"
             }
         }
-        stage("deploy") {
+        stage("Deploy") {
             steps {
                 sh "./mvnw clean heroku:deploy"
             }
