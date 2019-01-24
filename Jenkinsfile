@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "hi"
                 sh "./mvnw clean install -DskipTests"
+                echo "hello"
             }
         }
         stage("Test") {
