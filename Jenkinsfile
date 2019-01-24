@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+                echo "hi"
                 sh "./mvnw clean install -DskipTests"
             }
         }
